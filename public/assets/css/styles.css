@@ -1,0 +1,16 @@
+.panel{
+	margin-top: 20px;
+}
+
+th {
+	color: #181619;
+}
+
+a{
+	text-decoration: none;
+}
+
+.button-primary{
+	margin-left: 1.5px;
+	margin-right: 1.5px;
+}

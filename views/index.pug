@@ -1,0 +1,45 @@
+extends ./layout.pug
+block container
+	div(class="container")
+		div(class="panel")
+			h1().
+				List Profiles
+			hr
+			div(class="six columns")
+				a(href="/profile" class="button button-primary").
+					Agregar Perfil
+				a(href="/post" class="button button-primary").
+					Agregar Publicación
+			div(class="twelve columns")
+				table(class="u-full-width")
+					thead
+						tr
+							th CLAVE
+							th NOMBRE
+							th APELLIDO
+							th CORREO
+							th FECHA DE NACIMIENTO
+							th POST
+							th PERFIL
+							th MODIFICAR
+							th ELIMINAR
+					tbody
+						for profile in line
+							tr
+								td #{profile.cve_profile}
+								td #{profile.name_profile}
+								td #{profile.lastname_profile}
+								td #{profile.email_profile}
+								td #{profile.datebirth_profile}
+								td
+									a(href="/post/"+profile.cve_profile+"").
+										Ver
+								td
+									a(href="/profile/"+profile.cve_profile+"").
+										Ver
+								td
+									a(href="/profile/edit/"+profile.cve_profile+"").
+										Editar
+								td
+									a(href="/profile/delete/"+profile.cve_profile+"").
+										Eliminar
